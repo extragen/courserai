@@ -1,0 +1,59 @@
+@()
+
+@main("Welcome to Coursera") {
+    <div class="container">
+        <div id="welcome" class="row">
+            <div class="col-xs-6 col-md-4 col-md-offset-5">
+                <h1><a href="#">Welcome</a></h1>
+            </div>
+        </div>
+
+        <div id="main" class="row hidden">
+            <div id="alert_placeholder">
+            </div>
+
+            <ul class="nav nav-tabs">
+                <li><a href="#Chemistry" data-toggle="tab" coursera="Chemistry">Chemistry</a></li>
+                <li><a href="#CSSoftwareEngineering" data-toggle="tab" coursera="Computer Science: Software Engineering">CS: Software Engineering</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <div class="tab-pane active" id="Chemistry"></div>
+                <div class="tab-pane" id="CSSoftwareEngineering"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="commentsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Comments</h4>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                    </ul>
+                    <br/>
+                    <form id="commentForm" method="POST" action="@routes.Comments.add()" role="form">
+                        <input type="hidden" id="topicId" name="topicId">
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" name="email" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Comments</label>
+                            <input type="text" class="form-control" name="message" placeholder="Message">
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
