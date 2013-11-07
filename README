@@ -3,4 +3,29 @@ This is your new Play application
 
 1. Install Java 7 Update 45
 2. Install Play Framework v.2.2.1
-3.
+    2.1. Download http://downloads.typesafe.com/play/2.2.1/play-2.2.1.zip
+    2.2. Add the play script to your PATH
+        For convenience, you should add the framework installation directory to your system PATH. On UNIX systems, this means doing something like:
+
+        export PATH=$PATH:/relativePath/to/play
+
+        On Windows you’ll need to set it in the global environment variables. This means update the PATH in the environment variables and don’t use a path with spaces.
+    2.3. Check that the play command is available
+        From a shell, launch the play help command.
+
+        $ play help
+5. Get repository from GitHub
+    Get zip from GitHub
+    https://github.com/extragen/courserai
+
+    or
+
+    clone repository
+    $ git clone git@github.com:extragen/courserai.git
+6. Play application
+    $ cd courserai
+    $ play run
+7. Open in browser
+    http://localhost:9000/
+8. Click on button "Apply this script now!"
+
